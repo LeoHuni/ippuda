@@ -83,7 +83,7 @@ if app_mode == 'About App':
         """ ,
         unsafe_allow_html=True ,
     )
-    st.video('https://youtu.be/ctHelG7Auck')
+    st.video('https://youtu.be/1SGFEPEMaN4')
 
 elif app_mode == '가상 성형 AI':
     st.sidebar.markdown('---')
