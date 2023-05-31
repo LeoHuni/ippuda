@@ -58,14 +58,14 @@ import math
 
 def analysis(image1,ana_image) :
 	# image = cv2.imread(r'E:\side_job\Korean_Consulting_project\sequence_0_.jpg')
-	image=  image1
+	image=  np.array(image1)
 	# image = imutils.resize(image, width=500)
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	# detect faces in the grayscale image
 	rects = detector(gray, 1)
 
 	# image2 = cv2.imread(r'E:\side_job\Korean_Consulting_project\sequence_40_.jpg')
-	image2 = ana_image
+	image2 = np.array(ana_image)
 	# image2 = imutils.resize(image2, width=500)
 	gray2 = cv2.cvtColor(image2, cv2.COLOR_BGR2GRAY)
 	# detect faces in the grayscale image
