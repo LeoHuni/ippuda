@@ -110,7 +110,7 @@ elif app_mode == '가상 성형 AI':
     # st.sidebar.markdown('---')
     # CHANGE_GRADE = st.sidebar.slider('얼마나 바꿔볼래?' , min_value=0.0 , max_value=0.99 , value=0.5 , key='slider')
     # st.sidebar.markdown('---')
-
+    CHANGE_GRADE = 1
     src_image = st.sidebar.file_uploader("내 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='myPhoto')
     src_target_image = st.sidebar.file_uploader("워너비 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='celebPhoto')
     st.sidebar.markdown('---')
