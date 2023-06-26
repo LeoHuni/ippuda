@@ -219,14 +219,50 @@ elif app_mode == '가상 성형 AI':
         res_tot_2 = morph.analysis_morph.analysis(st.session_state[ 'MY_IMAGE' ] , st.session_state[ 'TARGET_IMAGE' ])
 
         left_eye_res = round(res_tot[ 0 ] , 2)
+        if left_eye_res > 95:
+            left_eye_res = 95
+        if left_eye_res < 0:
+            left_eye_res = 0
         R_eye_res = round(res_tot[ 1 ] , 2)
+        if R_eye_res > 95:
+            R_eye_res = 95
+        if R_eye_res < 0:
+            R_eye_res = 0        
         nose_bridge_res = round(res_tot[ 2 ] , 2)
+        if nose_bridge_res > 95:
+            nose_bridge_res = 95
+        if nose_bridge_res < 0:
+            nose_bridge_res = 0
         nos_res = round(res_tot[ 3 ] , 2)
+        if nos_res > 95:
+            nos_res = 95
+        if nos_res < 0:
+            nos_res = 0
         face_res = round(res_tot[ 4 ] , 2)
+        if face_res > 95:
+            face_res = 95
+        if face_res < 0:
+            face_res = 0
         L_eyebrow_res = round(res_tot[ 5 ] , 2)
+        if L_eyebrow_res > 95:
+            L_eyebrow_res = 95
+        if L_eyebrow_res < 0:
+            L_eyebrow_res = 0
         R_eyebrow_res = round(res_tot[ 6 ] , 2)
+        if R_eyebrow_res > 95:
+            R_eyebrow_res = 95
+        if R_eyebrow_res < 0:
+            R_eyebrow_res = 0
         U_mouth_res = round(res_tot[ 7 ] , 2)
+        if U_mouth_res > 95:
+            U_mouth_res = 95
+        if U_mouth_res < 0:
+            U_mouth_res = 0
         L_mouth_res = round(res_tot[ 8 ] , 2)
+        if L_mouth_res > 95:
+            L_mouth_res = 95
+        if L_mouth_res < 0:
+            L_mouth_res = 0
 
         col1 , col2 , col3 , col4 , col5 = st.columns(5)
         col1.metric("전체 유사도" , round(np.mean(res_tot) , 2) , round(np.mean(res_tot) - np.mean(res_tot_2)))
