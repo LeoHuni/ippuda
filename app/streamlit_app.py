@@ -192,7 +192,7 @@ elif app_mode == '가상 성형 AI':
                 st.session_state[ 'morph_array_origin' ] = morph_array_origin
             st.session_state[ 'morph_array_origin' ] = morph_array_origin
 
-            index = int(CHANGE_GRADE * 100)
+            index = int(.5 * 100)
             st.image(morph_array_origin[index])
             # image_res = Image.fromarray(morph_array[index])
             # st.image(image_res)
