@@ -127,10 +127,11 @@ elif app_mode == '가상 성형 AI':
         captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
     )
     col1, col2 = st.columns(2)
-    TRG = sampleImage
-    if 'TRG' not in session_state:
-        st.session_state[ 'TRG' ] = TRG
-    st.session_state[ 'TRG' ] = TRG
+    if sampleImage is not None:
+            TRG = sampleImage
+            if 'TRG' not in session_state:
+                st.session_state[ 'TRG' ] = TRG
+            st.session_state[ 'TRG' ] = TRG
     with col2:
         st.text('워너비 사진')
         st.image(TRG)
