@@ -165,7 +165,7 @@ elif app_mode == '가상 성형 AI':
         st.sidebar.image(targetImage)
         with col2:
             st.text('워너비 사진')
-            st.image(TRG)
+            st.image(targetImage)
     else:
          with col2:
             st.text('워너비 사진')
