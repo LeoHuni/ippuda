@@ -116,7 +116,7 @@ elif app_mode == '가상 성형 AI':
     src_target_image = st.sidebar.file_uploader("워너비 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='celebPhoto')
     st.sidebar.markdown('---')
         
-    targetImage = image_select(
+    sampleImage = image_select(
         label="Select a Sample",
         images=[
             np.array(Image.open(r"app/src/codeX/samples/1_01.png")),
@@ -165,6 +165,11 @@ elif app_mode == '가상 성형 AI':
         with col2:
             st.text('워너비 사진')
             st.image(targetImage)
+    else:
+         with col2:
+            st.text('워너비 사진')
+            st.image(sampleImage)   
+            targetImage = sampleImage
 
     if st.button("가상 성형 시작 :clap:" , key='morph_start'):
         with st.spinner(':smiley: :smile: 이뿌게 성형 중이에용 ! :laughing: :grin:'):
