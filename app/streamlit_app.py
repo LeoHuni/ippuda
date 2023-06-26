@@ -153,10 +153,6 @@ elif app_mode == '가상 성형 AI':
     global morph_array
     if src_image is not None:
         myImage = np.array(Image.open(src_image))
-        SRC = myImage
-        if 'SRC' not in st.session_state:
-                st.session_state[ 'SRC' ] = SRC
-        st.session_state[ 'SRC' ] = SRC
         st.sidebar.text('내 사진')
         st.sidebar.image(myImage)
         with col1:
@@ -165,13 +161,8 @@ elif app_mode == '가상 성형 AI':
                 
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
-        TRG = targetImage
-        if 'TRG' not in st.session_state:
-                st.session_state[ 'TRG' ] = TRG
-        st.session_state[ 'TRG' ] = TRG
-            
         st.sidebar.text('워너비 사진')
-        st.sidebar.image(TRG)
+        st.sidebar.image(targetImage)
         with col2:
             st.text('워너비 사진')
             st.image(TRG)
@@ -179,7 +170,7 @@ elif app_mode == '가상 성형 AI':
          with col2:
             st.text('워너비 사진')
             st.image(sampleImage)   
-            st.session_state[ 'TRG' ] = sampleImage
+            targetImage = sampleImage
 
     if st.button("가상 성형 시작 :clap:" , key='morph_start'):
         with st.spinner(':smiley: :smile: 이뿌게 성형 중이에용 ! :laughing: :grin:'):
