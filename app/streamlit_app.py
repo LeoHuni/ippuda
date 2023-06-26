@@ -106,10 +106,10 @@ elif app_mode == '가상 성형 AI':
     # st.markdown("**detected Faces**")
     # kpi1_text = st.markdown("0")
 
-    max_faces = st.sidebar.number_input('Maximum Number of Pictures' , value=2 , min_value=1 , key='num_input')
-    st.sidebar.markdown('---')
-    CHANGE_GRADE = st.sidebar.slider('얼마나 바꿔볼래?' , min_value=0.0 , max_value=0.99 , value=0.5 , key='slider')
-    st.sidebar.markdown('---')
+    # max_faces = st.sidebar.number_input('Maximum Number of Pictures' , value=2 , min_value=1 , key='num_input')
+    # st.sidebar.markdown('---')
+    # CHANGE_GRADE = st.sidebar.slider('얼마나 바꿔볼래?' , min_value=0.0 , max_value=0.99 , value=0.5 , key='slider')
+    # st.sidebar.markdown('---')
 
     src_image = st.sidebar.file_uploader("내 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='myPhoto')
     src_target_image = st.sidebar.file_uploader("워너비 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='celebPhoto')
