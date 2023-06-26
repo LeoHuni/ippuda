@@ -113,7 +113,22 @@ elif app_mode == '가상 성형 AI':
     src_image = st.sidebar.file_uploader("내 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='myPhoto')
     src_target_image = st.sidebar.file_uploader("워너비 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='celebPhoto')
     st.sidebar.markdown('---')
-
+        
+    targetImage = image_select(
+        label="Select a Sample",
+        images=[
+            np.array(Image.open(r"image_samples\images\1_01.png")),
+            np.array(Image.open(r"image_samples\images\2_01.png")),
+            np.array(Image.open(r"image_samples\images\3_01.png")),
+            np.array(Image.open(r"image_samples\images\4_01.png")),
+        ],
+        captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
+    )
+    form = st.form(key="form_settings")
+    col1, col2 = st.columns(2)
+    with col2:
+        st.image(targetImage)
+                    
     with st.sidebar:
         html_string = '''
                 <!-- Search Google -->
@@ -137,12 +152,17 @@ elif app_mode == '가상 성형 AI':
         myImage = np.array(Image.open(src_image))
         st.sidebar.text('내 사진')
         st.sidebar.image(myImage)
+        with col1:
+            st.image(src_image)
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
         st.sidebar.image(targetImage)
+        with col2:
+            st.image(targetImage)
+
     if st.button("가상 성형 시작 !" , key='morph_start'):
-        with st.spinner('이뿌게 성형 중이에용 ~!!'):
+        with st.spinner(':smiley: :smile: 이뿌게 성형 중이에용 ! :laughing: :grin:'):
 
             raw_image = align_images_dev(myImage, targetImage)
             MY_IMAGE = raw_image[0][0]
