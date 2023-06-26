@@ -34,7 +34,7 @@ def doMorphing(img1 , img2 , duration , frame_rate , output):
     return res, res_origin
 
 
-st.title('이뿌다 가상 성형 AI')
+st.title('🎈 이뿌다 가상 성형 AI 🎈')
 
 st.markdown(
     """
