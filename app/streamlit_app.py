@@ -166,6 +166,7 @@ elif app_mode == '가상 성형 AI':
         with col2:
             st.text('워너비 사진')
             st.image(targetImage)
+        src_target_image = None
     else:
          with col2:
             st.text('워너비 사진')
