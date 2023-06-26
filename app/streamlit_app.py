@@ -165,7 +165,7 @@ elif app_mode == '가상 성형 AI':
             st.text('워너비 사진')
             st.image(targetImage)
 
-    if st.button("가상 성형 시작 !" , key='morph_start'):
+    if st.button("가상 성형 시작 ! :clap:" , key='morph_start'):
         with st.spinner(':smiley: :smile: 이뿌게 성형 중이에용 ! :laughing: :grin:'):
 
             raw_image = align_images_dev(myImage, targetImage)
