@@ -128,7 +128,7 @@ elif app_mode == '가상 성형 AI':
     )
     col1, col2 = st.columns(2)
     TRG = sampleImage
-    if 'TRG' is not in session_state:
+    if 'TRG' not in session_state:
         st.session_state[ 'TRG' ] = TRG
     st.session_state[ 'TRG' ] = TRG
     with col2:
