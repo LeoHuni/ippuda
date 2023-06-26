@@ -118,10 +118,10 @@ elif app_mode == '가상 성형 AI':
     targetImage = image_select(
         label="Select a Sample",
         images=[
-            np.array(Image.open(r"image_samples\images\1_01.png")),
-            np.array(Image.open(r"image_samples\images\2_01.png")),
-            np.array(Image.open(r"image_samples\images\3_01.png")),
-            np.array(Image.open(r"image_samples\images\4_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples\1_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples\2_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples\3_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples\4_01.png")),
         ],
         captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
     )
