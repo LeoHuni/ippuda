@@ -126,15 +126,11 @@ elif app_mode == '가상 성형 AI':
         ],
         captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
     )
+    targetImage = sampleImage
     col1, col2 = st.columns(2)
-    if sampleImage is not None:
-            TRG = sampleImage
-            if 'TRG' not in session_state:
-                st.session_state[ 'TRG' ] = TRG
-            st.session_state[ 'TRG' ] = TRG
     with col2:
         st.text('워너비 사진')
-        st.image(TRG)
+        st.image(sampleImage)
             
     targetImage = st.session_state[ 'TRG' ]
     with st.sidebar:
@@ -168,8 +164,6 @@ elif app_mode == '가상 성형 AI':
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
         st.sidebar.image(targetImage)
-        st.session_state[ 'TRG' ] = targetImage
-
         with col2:
             st.text('워너비 사진')
             st.image(targetImage)
