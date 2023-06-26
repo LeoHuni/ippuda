@@ -131,8 +131,7 @@ elif app_mode == '가상 성형 AI':
     with col2:
         st.text('워너비 사진')
         st.image(sampleImage)
-            
-    targetImage = st.session_state[ 'TRG' ]
+
     with st.sidebar:
         html_string = '''
                 <!-- Search Google -->
