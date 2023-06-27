@@ -19,6 +19,7 @@ from src.codeX.utils.align_images_dev import align_images_dev
 import os
 from streamlit.components.v1 import html
 import streamlit.components.v1 as components
+from geopy.geocoders import ArcGIS
 
 js_share = '''
         type="text/javascript"
@@ -57,7 +58,7 @@ count = 0
 
 
 def mode_select(num):
-    mode = [ 'About App' , '가상 성형 AI' , '피부 진단 AI' ]
+    mode = [ 'About App' , '가상 성형 AI' , '피부 진단 AI', '병원 정보' ]
     app = st.sidebar.selectbox('choose the Appmode' ,
                                     mode ,
                                     key=str(num)
@@ -783,6 +784,15 @@ elif app_mode == '피부 진단 AI':
         st.subheader("공유 해볼까~")
         html(my_html)
         st.markdown(my_html , unsafe_allow_html=True)  # JavaScript doesn't work
+
+elif app_mode == '병원 정보':
+    
+    df_database = pd.read_csv("app/src/codeX/Clinic Profile - Sheet1.csv",index_col=None)
+    loc_database = pd.read_csv('app/src/codeX/results.csv')
+    print(loc_database)
+    st.map(loc_database)
+    st.dataframe(df_database)
+
 
 
 
