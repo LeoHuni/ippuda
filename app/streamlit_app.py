@@ -200,7 +200,7 @@ elif app_mode == '가상 성형 AI':
             st.image(morph_array_origin[index])
             # image_res = Image.fromarray(morph_array[index])
             # st.image(image_res)
-        st.success('성형 끗 !!')
+        st.balloons()
     st.markdown('---')
     index = int(st.number_input('몇퍼센트 결과볼래?' , value=50 , step=1 , format="%d"))
     CHANGE_GRADE2 = st.slider('내사진 <<<<<----->>>>> 워너비' , min_value=0 , max_value=99 , value=index)
