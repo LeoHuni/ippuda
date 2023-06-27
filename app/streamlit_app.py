@@ -6,6 +6,7 @@ from PIL import Image
 from sys import path
 import numpy as np
 from streamlit_image_select import image_select
+import pandas as pd
 
 cpath = os.getcwd()
 path.append(cpath + r'\codeX\utils')
