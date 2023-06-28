@@ -144,14 +144,14 @@ elif app_mode == '가상 성형 AI':
         st.sidebar.image(myImage)
         with col1:
             # st.text('내 사진')
-            st.image(myImage,caption='내 사진')
+            st.image(myImage,caption='내 사진',use_column_width=True)
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
         st.sidebar.image(targetImage)
         with col2:
             # placeholder_txt = st.text('워너비 사진')
-            placeholder = st.image(targetImage,caption='워너비 사진')
+            placeholder = st.image(targetImage,caption='워너비 사진',use_column_width=True)
             src_target_image = None
     else:            
             sampleImage = image_select(
@@ -167,7 +167,7 @@ elif app_mode == '가상 성형 AI':
             targetImage = sampleImage
             with col2:
                 # placeholder_txt = st.text('워너비 사진')
-                placeholder = st.image(sampleImage,caption='워너비 사진')
+                placeholder = st.image(sampleImage,caption='워너비 사진',use_column_width=True)
             
     if st.button("가상 성형 시작 :clap:" , key='morph_start'):
         empty_string = '''
