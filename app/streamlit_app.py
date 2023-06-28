@@ -131,8 +131,8 @@ elif app_mode == '가상 성형 AI':
     targetImage = sampleImage
     col1, col2 = st.columns(2)
     with col2:
-        st.text('워너비 사진')
-        st.image(sampleImage)
+        placeholder_txt = st.text('워너비 사진')
+        placeholder = st.image(sampleImage)
 
     with st.sidebar:
         html_string = '''
@@ -158,8 +158,8 @@ elif app_mode == '가상 성형 AI':
         st.sidebar.text('내 사진')
         st.sidebar.image(myImage)
         with col1:
-            st.text('내 사진')
-            st.image(src_image)
+            placeholder_txt = st.text('내 사진')
+            placeholder = st.image(src_image)
                 
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
