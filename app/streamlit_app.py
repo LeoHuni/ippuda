@@ -144,7 +144,7 @@ elif app_mode == '가상 성형 AI':
         st.sidebar.image(myImage)
         with col1:
             st.text('내 사진')
-            st.image(myImage,width=512,height=512)
+            st.image(myImage,width=512)
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
