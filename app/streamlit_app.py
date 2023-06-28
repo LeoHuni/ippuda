@@ -118,22 +118,6 @@ elif app_mode == '가상 성형 AI':
     src_target_image = st.sidebar.file_uploader("워너비 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='celebPhoto')
     st.sidebar.markdown('---')
         
-    sampleImage = image_select(
-        label="Select a Sample",
-        images=[
-            np.array(Image.open(r"app/src/codeX/samples/1_01.png")),
-            np.array(Image.open(r"app/src/codeX/samples/2_01.png")),
-            np.array(Image.open(r"app/src/codeX/samples/3_01.png")),
-            np.array(Image.open(r"app/src/codeX/samples/4_01.png")),
-        ],
-        captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
-    )
-    targetImage = sampleImage
-    col1, col2 = st.columns(2)
-    with col2:
-        placeholder_txt = st.text('워너비 사진')
-        placeholder = st.image(sampleImage)
-
     with st.sidebar:
         html_string = '''
                 <!-- Search Google -->
@@ -169,7 +153,23 @@ elif app_mode == '가상 성형 AI':
             st.text('워너비 사진')
             st.image(targetImage)
             src_target_image = None
-
+                
+    sampleImage = image_select(
+        label="Select a Sample",
+        images=[
+            np.array(Image.open(r"app/src/codeX/samples/1_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples/2_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples/3_01.png")),
+            np.array(Image.open(r"app/src/codeX/samples/4_01.png")),
+        ],
+        captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
+    )
+    targetImage = sampleImage
+    col1, col2 = st.columns(2)
+    with col2:
+        placeholder_txt = st.text('워너비 사진')
+        placeholder = st.image(sampleImage)
+            
     if st.button("가상 성형 시작 :clap:" , key='morph_start'):
         empty_string = '''
         <div></div>
