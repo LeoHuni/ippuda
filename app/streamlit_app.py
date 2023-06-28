@@ -145,7 +145,7 @@ elif app_mode == '가상 성형 AI':
         with col1:
             resized = cv2.resize(src_image, (512,512), interpolation = cv2.INTER_AREA)
             st.text('내 사진')
-            st.image(src_image)
+            st.image(resized)
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
