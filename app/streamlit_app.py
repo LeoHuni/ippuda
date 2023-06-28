@@ -171,6 +171,11 @@ elif app_mode == '가상 성형 AI':
             src_target_image = None
 
     if st.button("가상 성형 시작 :clap:" , key='morph_start'):
+        empty_string = '''
+        <div></div>
+        '''
+        components.html(empty_string)
+
         with st.spinner(':smiley: :smile: 이뿌게 성형 중이에용 ! :laughing: :grin:'):
 
             raw_image = align_images_dev(myImage, targetImage)
