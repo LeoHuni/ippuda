@@ -201,16 +201,16 @@ elif app_mode == '가상 성형 AI':
             st.session_state[ 'morph_array_origin' ] = morph_array_origin
 
             index = int(.5 * 100)
-            col1, co2 = st.columns(2)
-            with col1:
-                    st.image(morph_array_origin[index])
+            # col1, co2 = st.columns(2)
+            # with col1:
+            st.image(morph_array_origin[index])
             # image_res = Image.fromarray(morph_array[index])
             # st.image(image_res)
             # morph_array_origin[0].save('frame.gif',
             #                    save_all=True, append_images=morph_array_origin[1:], optimize=False, duration=40, loop=1)
             # frame_image = Image.open('frame.gif')
-            with col2:
-                    st.image(frame_image)
+            # with col2:
+            #         st.image(frame_image)
         
         st.balloons()
     st.markdown('---')
