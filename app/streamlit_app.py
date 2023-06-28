@@ -143,7 +143,7 @@ elif app_mode == '가상 성형 AI':
         st.sidebar.text('내 사진')
         st.sidebar.image(myImage)
         with col1:
-            st.text('내 사진')
+            # st.text('내 사진')
             st.image(myImage,caption='내 사진')
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
