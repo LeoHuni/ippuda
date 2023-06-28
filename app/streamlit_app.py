@@ -137,6 +137,7 @@ elif app_mode == '가상 성형 AI':
 
     print(src_image)
     global morph_array
+    col1, col2 = st.columns(2)        
     if src_image is not None:
         myImage = np.array(Image.open(src_image))
         st.sidebar.text('내 사진')
@@ -144,7 +145,6 @@ elif app_mode == '가상 성형 AI':
         with col1:
             st.text('내 사진')
             st.image(src_image)
-                
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
@@ -165,7 +165,6 @@ elif app_mode == '가상 성형 AI':
                 captions=["Sample 1", "Sample 2", "Sample 3", "Sample 4"],
             )
             targetImage = sampleImage
-            col1, col2 = st.columns(2)
             with col2:
                 placeholder_txt = st.text('워너비 사진')
                 placeholder = st.image(sampleImage)
