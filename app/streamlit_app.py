@@ -206,7 +206,7 @@ elif app_mode == '가상 성형 AI':
                     st.image(morph_array_origin[index])
             # image_res = Image.fromarray(morph_array[index])
             # st.image(image_res)
-            morph_array_origin[0].save('frame.gif',
+            morph_array_origin.save('frame.gif',
                                save_all=True, append_images=morph_array_origin[1:], optimize=False, duration=40, loop=0)
             frame_image = Image.open('frame.gif')
             with col2:
