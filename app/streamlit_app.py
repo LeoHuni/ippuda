@@ -142,16 +142,16 @@ elif app_mode == '가상 성형 AI':
         st.sidebar.text('내 사진')
         st.sidebar.image(myImage)
         with col1:
-            placeholder_txt = st.text('내 사진')
-            placeholder = st.image(src_image)
+            st.text('내 사진')
+            st.image(src_image)
                 
     if src_target_image is not None:
         targetImage = np.array(Image.open(src_target_image))
         st.sidebar.text('워너비 사진')
         st.sidebar.image(targetImage)
         with col2:
-            st.text('워너비 사진')
-            st.image(targetImage)
+            placeholder_txt = st.text('워너비 사진')
+            placeholder = st.image(targetImage)
             src_target_image = None
     else:            
             sampleImage = image_select(
