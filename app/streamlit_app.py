@@ -21,6 +21,7 @@ import os
 from streamlit.components.v1 import html
 import streamlit.components.v1 as components
 from geopy.geocoders import ArcGIS
+from st_aggrid import AgGrid, GridOptionsBuilder
 
 js_share = '''
         type="text/javascript"
@@ -800,12 +801,33 @@ elif app_mode == '피부 진단 AI':
 
 elif app_mode == '병원 정보':
     
-    df_database = pd.read_csv("app/src/codeX/Clinic Profile - Sheet1.csv",index_col=None)
-    loc_database = pd.read_csv('app/src/codeX/results.csv')
-    print(loc_database)
+    df_database = pd.read_csv("app/src/locations.csv",index_col=None)
+    loc_database = df_database.loc[:,['lat','lon']]
+    loc_database = pd.DataFrame(loc_database)
+    loc_database = loc_database.dropna(axis=0)
+    st.text('Our Branches')
     st.map(loc_database)
-    st.dataframe(df_database)
-
+        
+    # Configure grid options using GridOptionsBuilder
+    builder = GridOptionsBuilder.from_dataframe(df_database)
+    builder.configure_pagination(enabled=True)
+    builder.configure_selection(selection_mode='single', use_checkbox=False)
+    builder.configure_column('System Name', editable=False)
+    builder.configure_auto_height(True)
+    grid_options = builder.build()
+    column_defs = grid_options["columnDefs"]
+    columns_to_hide = ["Index","No.","System Name"]
+    # update the column definitions to hide the specified columns
+    for col in column_defs:
+        if col["headerName"] in columns_to_hide:
+            col["hide"] = True
+    selected_rows = AgGrid(df_database, gridOptions=grid_options)
+    
+    if selected_rows['selected_rows']:
+        num_selected = selected_rows['selected_rows'][0]['Index']
+        print(num_selected,loc_database.loc[[num_selected],:])
+        st.text('Hospital Location')
+        st.map(loc_database.loc[[num_selected],:])
 
 
 
