@@ -813,7 +813,7 @@ elif app_mode == '병원 정보':
     builder.configure_pagination(enabled=True)
     builder.configure_selection(selection_mode='single', use_checkbox=False)
     builder.configure_column('System Name', editable=False)
-    builder.configure_grid_options(rowHeight=40)
+    builder.configure_grid_options(rowHeight=30)
 
     grid_options = builder.build()
     column_defs = grid_options["columnDefs"]
