@@ -814,11 +814,11 @@ elif app_mode == '병원 정보':
     builder.configure_selection(selection_mode='single', use_checkbox=False)
     builder.configure_column('System Name', editable=False)
     builder.configure_grid_options(rowHeight=30)
-    builder.configure_pagination(paginationAutoPageSize=True)
+    builder.configure_pagination(paginationAutoPageSize=False, paginationPageSize=3)
 
     grid_options = builder.build()
     column_defs = grid_options["columnDefs"]
-    columns_to_hide = ["Index","No.","System Name"]
+    columns_to_hide = ["Index","No.","System Name","lat","lon"]
     # update the column definitions to hide the specified columns
     for col in column_defs:
         if col["headerName"] in columns_to_hide:
