@@ -61,7 +61,8 @@ count = 0
 
 
 def mode_select(num):
-    mode = [ '🖐️   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   입점 병원', '⏰   병원 상세 & 예약' ]
+    mode = [ '🖐️   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   입점 병원', '⏰   병원 상세 & 예약',
+           '🏠   UI 샘플']
     app = st.sidebar.selectbox('choose the Appmode' ,
                                     mode ,
                                     key=str(num)
@@ -384,3 +385,8 @@ elif app_mode == '⏰   병원 상세 & 예약':
             html_data = f.read()
         st.components.v1.html(html_data,height=1500)
 
+elif app_mode == '🏠   UI 샘플':
+        path_html = 'app/src/figma-to-html/index.html'
+        with open(path_to_html,'r') as f: 
+            html_ui = f.read()
+        st.components.v1.html(html_ui,height=1500)
