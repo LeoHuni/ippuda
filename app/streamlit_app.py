@@ -835,5 +835,3 @@ elif app_mode == '병원 정보':
         st.map(loc_database.loc[[num_selected],:])
 
 
-
-
