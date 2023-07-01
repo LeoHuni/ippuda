@@ -837,6 +837,4 @@ elif app_mode == '🏥   병원 정보':
             
        info = df_database.loc[num_selected,:]
        info_df = pd.DataFrame(info)
-       info_builder = GridOptionsBuilder.from_dataframe(info_df)     
-       info_options = info_builder.build()                
-
+       st.dataframe(info_df)
