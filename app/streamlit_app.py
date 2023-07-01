@@ -311,7 +311,7 @@ elif app_mode == '👧   피부 진단 AI':
     # url = "https://skin-analysis.p.rapidapi.com/face/effect/skin_analyze"
         
     st.markdown('---')
-    st.subheader("🚨 👷‍♀️👷‍♂️ 공사중입니다아아아 👷‍♂️👷‍♀️ 🚨")
+    st.subheader("🚨 👷‍♀️👷‍♂️   공사중입니다   👷‍♂️👷‍♀️ 🚨")
     MY_IMAGE = st.sidebar.file_uploader("내 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='skinUploader')
     if MY_IMAGE is not None:
         # load image using PIL
