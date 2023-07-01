@@ -833,6 +833,230 @@ elif app_mode == '🏥   입점 병원':
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
 elif app_mode == '⏰   병원 상세 & 예약':
-        
-    if st.button('병원 상세 정보',key = 'info'):           
-       st.text('booooo')
+        st.markdown(
+            """
+                <nav class="navbar">
+                	<div class="navbar__container">
+                		<a class="brand-title" href="#!">Dental Care</a>
+                		<input type="checkbox" id="menubtn">
+                		<label for="menubtn" class="icon menulbl">
+                		</label>
+                		<ul class="menu">
+                			<li class="menu__item">
+                				<a class="menu__link" href="#!">Servicios</a>
+                			</li>
+                			<li class="menu__item">
+                				<a class="menu__link" href="#!">Acerca</a>
+                			</li>
+                			<li class="menu__item">
+                				<a class="menu__link" href="#appointments">Citas</a>
+                			</li>
+                		</ul>
+                	</div>
+                </nav>
+                <header class="section header">
+                	<div class="header__col">
+                		<h1 class="title">Cuídamos al máximo tu sonrisa</h1>
+                		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium iste autem, rem saepe consequatur culpa atque iure sint consectetur?</p>
+                		<p>
+                			<a href="#!" class="button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mabreumx/appointment?hide_landing_page_details=1'});return false;">Reserva cita</a>
+                		</p>
+                	</div>
+                	<div class="header__col">
+                		<figure class="header-img">
+                			<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDMwODczOA&ixlib=rb-1.2.1&q=85" alt="" class="image image-blob">
+                		</figure>
+                	</div>
+                </header>
+                <section class="section services">
+                	<div class="service">
+                		<figure>
+                			<div class="service-icon">
+                				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="stethoscope" class="svg-inline--fa fa-stethoscope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                					<path fill="currentColor" d="M447.1 112c-34.2.5-62.3 28.4-63 62.6-.5 24.3 12.5 45.6 32 56.8V344c0 57.3-50.2 104-112 104-60 0-109.2-44.1-111.9-99.2C265 333.8 320 269.2 320 192V36.6c0-11.4-8.1-21.3-19.3-23.5L237.8.5c-13-2.6-25.6 5.8-28.2 18.8L206.4 35c-2.6 13 5.8 25.6 18.8 28.2l30.7 6.1v121.4c0 52.9-42.2 96.7-95.1 97.2-53.4.5-96.9-42.7-96.9-96V69.4l30.7-6.1c13-2.6 21.4-15.2 18.8-28.2l-3.1-15.7C107.7 6.4 95.1-2 82.1.6L19.3 13C8.1 15.3 0 25.1 0 36.6V192c0 77.3 55.1 142 128.1 156.8C130.7 439.2 208.6 512 304 512c97 0 176-75.4 176-168V231.4c19.1-11.1 32-31.7 32-55.4 0-35.7-29.2-64.5-64.9-64zm.9 80c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z"></path>
+                				</svg>
+                			</div>
+                		</figure>
+                		<h2 class="subtitle">Equipo profesional</h2>
+                		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, sit?</p>
+                	</div>
+                	<div class="service">
+                		<figure>
+                			<div class="service-icon">
+                				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="notes-medical" class="svg-inline--fa fa-notes-medical fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                					<path fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm96 304c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48zm0-192c0 4.4-3.6 8-8 8H104c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h176c4.4 0 8 3.6 8 8v16z"></path>
+                				</svg>
+                			</div>
+                		</figure>
+                		<h2 class="subtitle">Máximo cuidado</h2>
+                		<p>Veritatis cumque asperiores autem consectetur aut in sed, tenetur dolores.</p>
+                	</div>
+                	<div class="service">
+                		<figure>
+                			<div class="service-icon">
+                				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="teeth" class="svg-inline--fa fa-teeth fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                					<path fill="currentColor" d="M544 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h448c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96zM160 368c0 26.51-21.49 48-48 48s-48-21.49-48-48v-64c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v64zm0-128c0 8.84-7.16 16-16 16H80c-8.84 0-16-7.16-16-16v-64c0-26.51 21.49-48 48-48s48 21.49 48 48v64zm144 120c0 30.93-25.07 56-56 56s-56-25.07-56-56v-56c0-8.84 7.16-16 16-16h80c8.84 0 16 7.16 16 16v56zm0-120c0 8.84-7.16 16-16 16h-80c-8.84 0-16-7.16-16-16v-88c0-30.93 25.07-56 56-56s56 25.07 56 56v88zm144 120c0 30.93-25.07 56-56 56s-56-25.07-56-56v-56c0-8.84 7.16-16 16-16h80c8.84 0 16 7.16 16 16v56zm0-120c0 8.84-7.16 16-16 16h-80c-8.84 0-16-7.16-16-16v-88c0-30.93 25.07-56 56-56s56 25.07 56 56v88zm128 128c0 26.51-21.49 48-48 48s-48-21.49-48-48v-64c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v64zm0-128c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-64c0-26.51 21.49-48 48-48s48 21.49 48 48v64z"></path>
+                				</svg>
+                			</div>
+                		</figure>
+                		<h2 class="subtitle">Satisfacción</h2>
+                		<p>Necessitatibus laborum tempore distinctio, fugit nihil, obcaecati. Exercitationem, consequuntur, tempora.</p>
+                	</div>
+                </section>
+                <section class="section info">
+                	<div class="info-element">
+                		<h2>Lorem ipsum</h2>
+                		<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Quis eum vitae facilis fugiat sequi consequatur, quisquam ut consequuntur minima, distinctio incidunt. Laboriosam nesciunt quo, aliquid fugit veritatis enim soluta nostrum.</p>
+                	</div>
+                	<figure>
+                		<img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDQyMTUxNA&ixlib=rb-1.2.1&q=85" alt="" class="image">
+                	</figure>
+                </section>
+                <section class="section info">
+                	<div class="info-element">
+                		<h2>Dolor sit amet</h2>
+                		<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Illum numquam praesentium neque recusandae suscipit fugit ipsum! Consequuntur, modi consectetur aspernatur facere ea alias, aperiam maxime similique, est totam at, voluptatum?</p>
+                	</div>
+                	<figure>
+                		<img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDQyMTQ3Nw&ixlib=rb-1.2.1&q=85" alt="" class="image">
+                	</figure>
+                </section>
+                <h2 class="section center">Testimonios</h2>
+                <section class="section testimonials">
+                	<div class="testimonials__container">
+                
+                		<div class="testimonial">
+                			<figure>
+                				<img src="https://picsum.photos/id/453/100" alt="" class="circle">
+                			</figure>
+                			<h3>Juan Pérez</h3>
+                			<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit.</p>
+                			<p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+                		</div>
+                
+                		<div class="testimonial">
+                			<figure>
+                				<img src="https://picsum.photos/id/1027/100" alt="" class="circle">
+                			</figure>
+                			<h3>Diana García</h3>
+                			<p>Illum laudantium quasi suscipit, magnam ipsa, dolorum est id impedit, voluptatum, aperiam saepe omnis labore.</p>
+                			<p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+                		</div>
+                
+                		<div class="testimonial">
+                			<figure>
+                				<img src="https://picsum.photos/id/883/100" alt="" class="circle">
+                			</figure>
+                			<h3>Carlos Juárez</h3>
+                			<p>Molestiae nihil alias dolores nesciunt? Ut consectetur dolor perspiciatis quaerat incidunt quos veritatis, et ducimus?</p>
+                			<p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+                		</div>
+                
+                	</div>
+                </section>
+                <section class="section">
+                	<h2 class="center" id="appointments">Haz tu cita ahora</h2>
+                	<div class="calendly-inline-widget" data-url="https://calendly.com/mabreumx/appointment" style="min-width:320px;height:630px;"></div>
+                </section>
+                <footer class="section footer">
+                	<address class="address">
+                		<p>Calle Siempre viva 404</p>
+                		<p>Col. Jardínes, Ciudad Nueva.</p>
+                		<p>C.P. 12345</p>
+                	</address>
+                	<ul>
+                		<li>
+                			<a href="#!" class="social-link">
+                				<span class="icon">
+                					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-square-alt" class="svg-inline--fa fa-phone-square-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                						<path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-16.39 307.37l-15 65A15 15 0 0 1 354 416C194 416 64 286.29 64 126a15.7 15.7 0 0 1 11.63-14.61l65-15A18.23 18.23 0 0 1 144 96a16.27 16.27 0 0 1 13.79 9.09l30 70A17.9 17.9 0 0 1 189 181a17 17 0 0 1-5.5 11.61l-37.89 31a231.91 231.91 0 0 0 110.78 110.78l31-37.89A17 17 0 0 1 299 291a17.85 17.85 0 0 1 5.91 1.21l70 30A16.25 16.25 0 0 1 384 336a17.41 17.41 0 0 1-.39 3.37z"></path>
+                					</svg>
+                				</span>
+                				<span>+52 458 3215</span>
+                			</a>
+                		</li>
+                		<li>
+                			<a href="#!" class="social-link">
+                				<span class="icon">
+                					<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp" class="svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                						<path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+                					</svg>
+                				</span>
+                				<span>+52 458 8545</span>
+                			</a>
+                		</li>
+                		<li>
+                			<a href="#!" class="social-link">
+                				<span class="icon">
+                					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                						<path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                					</svg>
+                				</span>
+                				<span>info@smile.yes</span>
+                			</a>
+                		</li>
+                	</ul>
+                	<p>
+                		<a href="#!" class="social-link">
+                			<span class="icon">
+                				<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                					<path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+                				</svg>
+                			</span>
+                			<span>Facebook</span>
+                		</a>
+                		<a href="" class="social-link">
+                			<span class="icon">
+                				<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                					<path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                				</svg>
+                			</span>
+                			<span>Twitter</span>
+                		</a>
+                		<a href="" class="social-link">
+                			<span class="icon">
+                				<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                					<path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                				</svg>
+                			</span>
+                			<span>Instagram</span>
+                		</a>
+                	</p>
+                </footer>s
+            <script>
+                'use strict';
+                const $body = document.body;
+                const $menuBtn = document.querySelector('#menubtn');
+                const $menuLbl = document.querySelector('.menulbl');
+                
+                document.addEventListener('DOMContentLoaded', () => {
+                        $body.addEventListener('click', e => {
+                                const compare = e.target !== $menuBtn && e.target !== $menuLbl;
+                                compare && ($menuBtn.checked = false);
+                        });
+                });
+                
+                // Scroll Reveal
+                const sr = ScrollReveal({
+                    distance: '30px',
+                    duration: 1800,
+                });
+                
+                sr.reveal(`.service:nth-child(2)`, {
+                    origin: 'top',
+                    interval: 200,
+                                reset: true
+                });
+                sr.reveal(`.service:nth-child(1), .service:nth-child(3)`)
+                
+                sr.reveal(`.header__col:first-child, .info-element`, {
+                    origin: 'left'
+                })
+                sr.reveal(`.image`, {
+                    origin: 'right'
+                });
+                sr.reveal(`.testimonials`);
+            </script>
+            """ ,
+            unsafe_allow_html=True ,
+        )
