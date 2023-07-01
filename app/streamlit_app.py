@@ -800,7 +800,7 @@ elif app_mode == '👧   피부 진단 AI':
         html(my_html)
         st.markdown(my_html , unsafe_allow_html=True)  # JavaScript doesn't work
 
-elif app_mode == '🏥   병원 정보':
+elif app_mode == '🏥   입점 병원':
     
     df_database = pd.read_csv("app/src/locations.csv",index_col=None)
     loc_database = df_database.loc[:,['lat','lon']]
