@@ -833,5 +833,19 @@ elif app_mode == '병원 정보':
         # print(num_selected,loc_database.loc[[num_selected],:])
         st.text('Hospital Location')
         st.map(loc_database.loc[[num_selected],:])
-
+        st.sidebar.markdown('---')
+        st.markdown(
+                """
+                <style>
+                [data-testid="stSidebar"][aria-expended="true"]> div:first-child{
+                    width: 350px
+                }
+                [data-testid="stSidebar"][aria-expended="false"]> div:first-child{
+                    width: 350px
+                    margin-left = -350px
+                }
+                </style>
+                """ ,
+                unsafe_allow_html=True ,
+            )
 
