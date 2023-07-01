@@ -17,9 +17,7 @@ from morph.face_morph_dev import generate_morph_sequence
 import morph.analysis_morph
 from src.codeX.utils.align_images_dev import align_images_dev
 
-import os
 from streamlit.components.v1 import html
-import streamlit.components.v1 as components
 from geopy.geocoders import ArcGIS
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import ColumnsAutoSizeMode
