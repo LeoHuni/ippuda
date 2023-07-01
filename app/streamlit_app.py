@@ -831,5 +831,5 @@ elif app_mode == '병원 정보':
     if selected_rows['selected_rows']:
         num_selected = selected_rows['selected_rows'][0]['Index']
         # print(num_selected,loc_database.loc[[num_selected],:])
-        st.text('Hospital Location :earth_asia: ')
+        st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
