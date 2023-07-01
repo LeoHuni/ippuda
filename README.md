@@ -1,2 +1,0 @@
-"# ippuda" "# ippuda"
-
