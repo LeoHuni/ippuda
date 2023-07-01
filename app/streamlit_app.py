@@ -383,10 +383,10 @@ elif app_mode == '⏰   병원 상세 & 예약':
         # Read file and keep in variable
         with open(path_to_html,'r') as f: 
             html_data = f.read()
-        st.components.v1.html(html_data,height=height)
+        st.components.v1.html(html_data,height=2000)
 
 elif app_mode == '🏠   UI 샘플':
         path_html = 'app/src/figma-to-html/index.html'
         with open(path_html,'r') as s: 
             html_ui = s.read()
-        st.components.v1.html(html_ui,height=1500)
+        st.components.v1.html(html_ui,height=2000, width)
