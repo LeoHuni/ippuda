@@ -3,7 +3,7 @@ import streamlit as st
 import os
 import cv2
 from PIL import Image
-from sys import path
+from sys import pathㄹ
 import numpy as np
 from streamlit_image_select import image_select
 import pandas as pd
@@ -834,3 +834,4 @@ elif app_mode == '병원 정보':
         st.text('Hospital Location')
         st.map(loc_database.loc[[num_selected],:])
         if st.button('예약',key='reserve'):
+                st.text('BBOoo')
