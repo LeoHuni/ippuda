@@ -833,4 +833,9 @@ elif app_mode == '🏥   입점 병원':
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
 elif app_mode == '⏰   병원 상세 & 예약':
+        path_to_html ='app/src/info.html'
+        # Read file and keep in variable
+        with open(path_to_html,'r') as f: 
+            html_data = f.read()
+        st.components.v1.html(html_data)
 
