@@ -833,3 +833,5 @@ elif app_mode == '🏥   병원 정보':
         # print(num_selected,loc_database.loc[[num_selected],:])
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
+        if st.button('병원 상세 정보',key = 'info'):
+                st.text('reserve')
