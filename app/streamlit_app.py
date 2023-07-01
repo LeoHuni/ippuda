@@ -835,6 +835,6 @@ elif app_mode == '🏥   병원 정보':
             
     if st.button('병원 상세 정보',key = 'info'):
             
-       info = df_database.loc[num_selected,:]
+       info = df_database.iloc[num_selected,:]
        info_df = pd.DataFrame(info)
        st.dataframe(info_df)
