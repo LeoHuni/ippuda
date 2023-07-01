@@ -1,4 +1,4 @@
 [theme]
 base="light"
-primaryColor="#ef5460"
-font="monospace"
+secondaryBackgroundColor="#e4e4e4"
+textColor="#000000"
