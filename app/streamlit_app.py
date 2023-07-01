@@ -389,4 +389,4 @@ elif app_mode == '🏠   UI 샘플':
         path_html = 'app/src/figma-to-html/index.html'
         with open(path_html,'r') as s: 
             html_ui = s.read()
-        st.components.v1.html(html_ui,height=2000, width)
+        st.components.v1.html(html_ui,height=2000)
