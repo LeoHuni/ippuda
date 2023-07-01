@@ -834,4 +834,9 @@ elif app_mode == '🏥   병원 정보':
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
         if st.button('병원 상세 정보',key = 'info'):
-                st.text('reserve')
+    info = df_database.iloc[2]
+    info_builder = GridOptionsBuilder.from_dataframe(info)     
+    info_options = info_builder.build()
+       
+    info =                  
+
