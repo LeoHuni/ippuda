@@ -309,6 +309,9 @@ elif app_mode == '💉   가상 성형 AI':
 elif app_mode == '👧   피부 진단 AI':
     # import requests
     # url = "https://skin-analysis.p.rapidapi.com/face/effect/skin_analyze"
+        
+    st.markdown('---')
+    st.subheader("🚨 👷‍♀️👷‍♂️ 공사중입니다아아아 👷‍♂️👷‍♀️ 🚨")
     MY_IMAGE = st.sidebar.file_uploader("내 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='skinUploader')
     if MY_IMAGE is not None:
         # load image using PIL
@@ -339,8 +342,6 @@ elif app_mode == '👧   피부 진단 AI':
 
         # print(response.json())
 
-   st.markdown('---')
-   st.subheader("🚨 👷‍♀️👷‍♂️ 공사중입니다아아아 👷‍♂️👷‍♀️ 🚨")
         # html(my_html)
         # st.markdown(my_html , unsafe_allow_html=True)  # JavaScript doesn't work
 
