@@ -22,6 +22,7 @@ from streamlit.components.v1 import html
 import streamlit.components.v1 as components
 from geopy.geocoders import ArcGIS
 from st_aggrid import AgGrid, GridOptionsBuilder
+from st_aggrid.shared import ColumnsAutoSizeMode
 
 js_share = '''
         type="text/javascript"
@@ -823,7 +824,9 @@ elif app_mode == '병원 정보':
     for col in column_defs:
         if col["headerName"] in columns_to_hide:
             col["hide"] = True
-    selected_rows = AgGrid(df_database, gridOptions=grid_options)
+    selected_rows = AgGrid(df_database, gridOptions=grid_options,
+                          columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
+                        )
     
     if selected_rows['selected_rows']:
         num_selected = selected_rows['selected_rows'][0]['Index']
