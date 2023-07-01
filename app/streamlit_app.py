@@ -834,6 +834,7 @@ elif app_mode == '병원 정보':
         st.text('Hospital Location')
         st.map(loc_database.loc[[num_selected],:])
         st.sidebar.markdown('---')
+        st.text('dlfj;aldjfaksd;)
         st.markdown(
                 """
                 <style>
