@@ -837,5 +837,5 @@ elif app_mode == '⏰   병원 상세 & 예약':
         # Read file and keep in variable
         with open(path_to_html,'r') as f: 
             html_data = f.read()
-        st.components.v1.html(html_data)
+        st.components.v1.html(html_data,height=1500)
 
