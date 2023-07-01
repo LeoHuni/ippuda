@@ -91,7 +91,7 @@ if app_mode == '✨   About App':
     )
     st.video('https://youtu.be/1SGFEPEMaN4')
 
-elif app_mode == '가상 성형 AI':
+elif app_mode == '💉   가상 성형 AI':
     st.sidebar.markdown('---')
     st.markdown(
         """
@@ -306,7 +306,7 @@ elif app_mode == '가상 성형 AI':
     html(my_html)
     st.markdown(my_html , unsafe_allow_html=True)  # JavaScript doesn't work
 
-elif app_mode == '피부 진단 AI':
+elif app_mode == '👧   피부 진단 AI':
     # import requests
     # url = "https://skin-analysis.p.rapidapi.com/face/effect/skin_analyze"
     MY_IMAGE = st.sidebar.file_uploader("내 사진 올리기" , type=[ "jpg" , "jpeg" , "png" ] , key='skinUploader')
@@ -800,7 +800,7 @@ elif app_mode == '피부 진단 AI':
         html(my_html)
         st.markdown(my_html , unsafe_allow_html=True)  # JavaScript doesn't work
 
-elif app_mode == '병원 정보':
+elif app_mode == '🏥   병원 정보':
     
     df_database = pd.read_csv("app/src/locations.csv",index_col=None)
     loc_database = df_database.loc[:,['lat','lon']]
