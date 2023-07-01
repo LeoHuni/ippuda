@@ -1430,7 +1430,8 @@ elif app_mode == '⏰   병원 상세 & 예약':
                 			<span>Instagram</span>
                 		</a>
                 	</p>
-                </footer>s
+                </footer>
+            </html>
             <script>
                 'use strict';
                 const $body = document.body;
