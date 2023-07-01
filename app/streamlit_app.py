@@ -18,7 +18,7 @@ import morph.analysis_morph
 from src.codeX.utils.align_images_dev import align_images_dev
 
 from streamlit.components.v1 import html
-from strealit.components.v1 as components
+import strealit.components.v1 as components
 from geopy.geocoders import ArcGIS
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import ColumnsAutoSizeMode
