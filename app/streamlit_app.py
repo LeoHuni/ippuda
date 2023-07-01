@@ -339,10 +339,8 @@ elif app_mode == '👧   피부 진단 AI':
 
         # print(response.json())
 
-    import json
-# Execute your app  
-  st.markdown('---')
-  st.subheader("🚨 👷‍♀️👷‍♂️ 공사중입니다아아아 👷‍♂️👷‍♀️ 🚨")
+   st.markdown('---')
+   st.subheader("🚨 👷‍♀️👷‍♂️ 공사중입니다아아아 👷‍♂️👷‍♀️ 🚨")
         # html(my_html)
         # st.markdown(my_html , unsafe_allow_html=True)  # JavaScript doesn't work
 
