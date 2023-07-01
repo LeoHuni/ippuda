@@ -61,7 +61,7 @@ count = 0
 
 
 def mode_select(num):
-    mode = [ '✨   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   병원 정보' ]
+    mode = [ '🖐️   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   병원 정보' ]
     app = st.sidebar.selectbox('choose the Appmode' ,
                                     mode ,
                                     key=str(num)
@@ -72,7 +72,7 @@ def mode_select(num):
 
 app_mode = mode_select(count)
 
-if app_mode == '✨   About App':
+if app_mode == '🖐️   About App':
     st.markdown('"Experience the power of transformation with our interactive plastic surgery simulation service, allowing you to visualize the possibilities and make informed decisions about your desired changes."')
 
     st.markdown(
