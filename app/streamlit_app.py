@@ -61,7 +61,7 @@ count = 0
 
 
 def mode_select(num):
-    mode = [ '🖐️   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   병원 정보' ]
+    mode = [ '🖐️   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   입점 병원', '⏰   병원 상세 & 예약' ]
     app = st.sidebar.selectbox('choose the Appmode' ,
                                     mode ,
                                     key=str(num)
@@ -832,8 +832,8 @@ elif app_mode == '🏥   병원 정보':
         # print(num_selected,loc_database.loc[[num_selected],:])
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
-            
-    if st.button('병원 상세 정보',key = 'info'):            
-       info = df_database.iloc[num_selected-1,:]
-       info_df = pd.DataFrame(info)
-       st.dataframe(info_df)
+    if app_mode == '⏰   병원 상세 & 예약':            
+            if st.button('병원 상세 정보',key = 'info'):            
+               info = df_database.iloc[num_selected-1,:]
+               info_df = pd.DataFrame(info)
+               st.dataframe(info_df)
