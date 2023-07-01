@@ -72,7 +72,7 @@ def mode_select(num):
 
 app_mode = mode_select(count)
 
-if app_mode == 'About App':
+if app_mode == '✨   About App':
     st.markdown('"Experience the power of transformation with our interactive plastic surgery simulation service, allowing you to visualize the possibilities and make informed decisions about your desired changes."')
 
     st.markdown(
