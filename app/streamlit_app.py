@@ -827,16 +827,14 @@ elif app_mode == '🏥   병원 정보':
     selected_rows = AgGrid(df_database, gridOptions=grid_options,
                           columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
                         )
-    
     if selected_rows['selected_rows']:
         num_selected = selected_rows['selected_rows'][0]['Index']
         # print(num_selected,loc_database.loc[[num_selected],:])
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
-        if st.button('병원 상세 정보',key = 'info'):
-    info = df_database.iloc[2]
-    info_builder = GridOptionsBuilder.from_dataframe(info)     
-    info_options = info_builder.build()
-       
-    info =                  
+            
+    if st.button('병원 상세 정보',key = 'info'):
+       info = df_database.iloc[2]
+       info_builder = GridOptionsBuilder.from_dataframe(info)     
+       info_options = info_builder.build()                
 
