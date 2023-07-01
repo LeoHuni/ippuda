@@ -833,7 +833,7 @@ elif app_mode == '🏥   병원 정보':
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
     if app_mode == '⏰   병원 상세 & 예약':            
-            if st.button('병원 상세 정보',key = 'info'):            
-               info = df_database.iloc[num_selected-1,:]
-               info_df = pd.DataFrame(info)
-               st.dataframe(info_df)
+       if st.button('병원 상세 정보',key = 'info'):            
+          info = df_database.iloc[num_selected-1,:]
+          info_df = pd.DataFrame(info)
+          st.dataframe(info_df)
