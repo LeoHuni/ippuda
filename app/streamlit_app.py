@@ -393,4 +393,4 @@ elif app_mode == '🏠   병원 상세 UI 샘플(2)':
         path_html = 'app/src/sample2/index.html'
         with open(path_html,'r') as f: 
             html_ui = f.read()
-        st.components.v1.html(html_ui,height=1908px, width =390px)
+        st.components.v1.html(html_ui,height=1908, width =390)
