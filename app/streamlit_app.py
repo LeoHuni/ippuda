@@ -61,7 +61,7 @@ count = 0
 
 def mode_select(num):
     mode = [ '🖐️   About App' , '💉   가상 성형 AI' , '👧   피부 진단 AI', '🏥   입점 병원', '⏰   병원 상세 & 예약',
-           '🏠   병원 상세 UI 샘플(1)', '🏠   병원 상세 UI 샘플(2)']
+           '🏠   병원 상세 UI 샘플(1)', '🏠   병원 상세 UI 샘플(2)', '🏠   병원 상세 UI 샘플(3)']
     app = st.sidebar.selectbox('choose the Appmode' ,
                                     mode ,
                                     key=str(num)
@@ -394,3 +394,8 @@ elif app_mode == '🏠   병원 상세 UI 샘플(2)':
         with open(path_html,'r') as f: 
             html_ui = f.read()
         st.components.v1.html(html_ui,height=1908, width =390)
+elif app_mode== '🏠   병원 상세 UI 샘플(3)':
+        with open(path_html,'r') as f: 
+            html_ui = f.read()
+        st.components.v1.html(html_ui,height=844, width =390)
+        
