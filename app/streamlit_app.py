@@ -395,6 +395,7 @@ elif app_mode == '🏠   병원 상세 UI 샘플(2)':
             html_ui = f.read()
         st.components.v1.html(html_ui,height=1908, width =390)
 elif app_mode== '🏠   병원 상세 UI 샘플(3)':
+        path_html = 'app/src/sample3/index.html'
         with open(path_html,'r') as f: 
             html_ui = f.read()
         st.components.v1.html(html_ui,height=844, width =390)
