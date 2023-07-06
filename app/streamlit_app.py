@@ -379,7 +379,10 @@ elif app_mode == '🏥   입점 병원':
         st.text('Hospital Location 🌏')
         st.map(loc_database.loc[[num_selected],:]) 
 elif app_mode == '⏰   병원 상세 & 예약':
-        '🌈   메인페이지 UI 샘플'
+        path_html = 'app/src/info.html'
+        with open(path_html,'r') as f: 
+            html_ui = f.read()
+        st.components.v1.html(html_ui,height=2000)  
 elif app_mode == '🌈   메인페이지 UI 샘플':
         path_html = 'app/src/landing/index.html'
         with open(path_html,'r') as f: 
