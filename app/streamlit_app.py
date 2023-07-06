@@ -387,7 +387,7 @@ elif app_mode == '🌈   메인페이지 UI 샘플':
         path_html = 'app/src/landing/index.html'
         with open(path_html,'r') as f: 
             html_ui = f.read()
-        st.components.v1.html(html_ui,height=2000)        
+        st.components.v1.html(html_ui,height=844, width=390)        
 elif app_mode == '🏠   병원 상세 UI 샘플(1)':
         path_html = 'app/src/figma-to-html/index.html'
         with open(path_html,'r') as f: 
