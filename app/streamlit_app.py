@@ -236,7 +236,14 @@ elif app_mode == '💉   가상 성형 AI':
         sequence_list = st.session_state[ 'morph_array_origin' ]
 
         print(str(index) + '.jpg')
-        st.image(sequence_list[index])
+        # st.image(sequence_list[index])
+        col1, co2 = st.columns(2)
+            with col1:
+                    st.image(sequence_list[index])
+
+            with col2:
+                    st.image(remove(sequence_list[index],post_process_mask=True,bgcolor=(255, 255, 255, 255)))
+                    
         ana_image = cv2.cvtColor(np.array(sequence_list[index]), cv2.COLOR_RGB2BGR)
         res_tot = morph.analysis_morph.analysis(st.session_state[ 'MY_IMAGE' ] , ana_image)
         res_tot_2 = morph.analysis_morph.analysis(st.session_state[ 'MY_IMAGE' ] , st.session_state[ 'TARGET_IMAGE' ])
