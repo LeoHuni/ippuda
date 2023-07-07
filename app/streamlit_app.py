@@ -7,6 +7,7 @@ from sys import path
 import numpy as np
 from streamlit_image_select import image_select
 import pandas as pd
+from rembg import remove
 
 cpath = os.getcwd()
 path.append(cpath + r'\codeX\utils')
@@ -204,9 +205,11 @@ elif app_mode == '💉   가상 성형 AI':
             st.session_state[ 'morph_array_origin' ] = morph_array_origin
 
             index = int(.5 * 100)
-            # col1, co2 = st.columns(2)
-            # with col1:
-            st.image(morph_array_origin[index])
+            col1, co2 = st.columns(2)
+            with col1:
+                    st.image(morph_array_origin[index])
+            with col2:
+                    st.image(remove(morph_array_origin[index],post_process_mask=True,bgcolor=(255, 255, 255, 255)))
             # image_res = Image.fromarray(morph_array[index])
             # st.image(image_res)
             # morph_array_origin[0].save('frame.gif',
