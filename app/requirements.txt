@@ -47,6 +47,7 @@ pytz==2023.3
 pytz-deprecation-shim==0.1.0.post0
 PyWavelets==1.4.1
 requests==2.30.0
+rembg==2.0.49
 rich==13.3.5
 scikit-image==0.20.0
 scipy==1.9.1
