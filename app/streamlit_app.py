@@ -205,10 +205,10 @@ elif app_mode == '💉   가상 성형 AI':
             st.session_state[ 'morph_array_origin' ] = morph_array_origin
 
             index = int(.5 * 100)
-            col1, co2 = st.columns(2)
+            # col1, co2 = st.columns(2)
             
-            col1.image(morph_array_origin[index])
-            col2.image(remove(morph_array_origin[index],post_process_mask=True,bgcolor=(255, 255, 255, 255)))
+            st.image(morph_array_origin[index])
+            # col2.image(remove(morph_array_origin[index],post_process_mask=True,bgcolor=(255, 255, 255, 255)))
             # image_res = Image.fromarray(morph_array[index])
             # st.image(image_res)
             # morph_array_origin[0].save('frame.gif',
