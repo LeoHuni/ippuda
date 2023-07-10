@@ -12,11 +12,11 @@ from rembg import remove
 cpath = os.getcwd()
 path.append(cpath + r'\codeX\utils')
 
-from morph.face_landmark_detection import generate_face_correspondences
-from morph.delaunay_triangulation import make_delaunay
-from morph.face_morph_dev import generate_morph_sequence
-import morph.analysis_morph
-from src.codeX.utils.align_images_dev import align_images_dev
+from app.morph.face_landmark_detection import generate_face_correspondences
+from app.morph.delaunay_triangulation import make_delaunay
+from app.morph.face_morph_dev import generate_morph_sequence
+import app.morph.analysis_morph
+from app.src.codeX.utils.align_images_dev import align_images_dev
 
 from streamlit.components.v1 import html
 import streamlit.components.v1 as components
